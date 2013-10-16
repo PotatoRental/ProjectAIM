@@ -3,3 +3,4 @@ grailsw
 grailsw.bat
 /wrapper/
 /web-app/WEB-INF/
+/target/
