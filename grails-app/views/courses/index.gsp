@@ -7,7 +7,6 @@
 
     <meta name="author" content="Monika Tuchowska"/>
 
-    <meta name="author" content="Monika Tuchowska"/>
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'default.css')}" />
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'component.css')}" />
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,900italic,900,500'  type='text/css'>

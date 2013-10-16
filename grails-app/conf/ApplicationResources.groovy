@@ -15,4 +15,5 @@ modules = {
     home {
         resource url: 'css/main.css'
     }
+
 }

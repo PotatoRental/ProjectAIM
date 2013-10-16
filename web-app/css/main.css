@@ -102,7 +102,7 @@ h1, .importpage h1 {
     border-bottom:1px solid #dcdcec;
 }
 
-.search-results li:hover, .search-results li a:hover {
+.search-results li:hover, .search-results li a:hover, .blue-button:hover {
     color:#fff;
     background-color: #428bca;
     -o-transition:.5s;
@@ -141,4 +141,26 @@ h1, .importpage h1 {
 .copyrights {
     text-align: center;
     color: #777;
+}
+
+#login-wrap {
+    position:fixed;
+    top: 100px;
+    width: 100%;
+}
+#login {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 250px;
+    max-width: 400px;
+    border: 1px solid #dcdcec;
+    padding: 40px 80px;
+}
+
+
+.blue-button {
+    width: 100%;
+    height: 45px;
+    font-size: 14px ;
+    background-color: #dcdcec;
 }
