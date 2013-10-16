@@ -5,8 +5,8 @@
       <configuration>
         <webroots>
           <root url="file://$MODULE_DIR$/target/work/plugins/jquery-1.10.2/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/database-migration-1.3.5/grails-app/views" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-core-2.0-RC2/grails-app/views" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/database-migration-1.3.5/grails-app/views" relative="/" />
         </webroots>
         <sourceRoots />
       </configuration>
@@ -66,6 +66,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="grails-2.3.0" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="grails-2.3.0" level="application" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (ProjectAIM-grailsPlugins)">

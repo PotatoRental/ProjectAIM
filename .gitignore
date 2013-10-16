@@ -1,6 +1,7 @@
 .idea
 grailsw
 grailsw.bat
+ProjectAIM-grailsPlugins.iml
 /wrapper/
 /web-app/WEB-INF/
 /target/
