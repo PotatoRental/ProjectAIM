@@ -15,11 +15,11 @@
     <div id='login'>
 
         <h2>Sign In</h2>
-
+            <br>
         <form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
             <p>
                 <label id='username-label' for='username'>Username</label>
-                <input type='text' class='form-control' value="Email" name='j_username' id='username'/>
+                <input type='text' class='form-control' name='j_username' id='username'/>
             </p>
 
             <p><label id='password-label' for='password'>Password</label>

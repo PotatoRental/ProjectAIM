@@ -27,7 +27,7 @@
 
 <div class="container">
 
-   <g:include view="nav.gsp"/>
+    <g:include view="nav.gsp"/>
 
     <div class="row maincontent">
         <div class="col-md-12">
@@ -52,41 +52,6 @@
                 <ul>
                     <li><a href="#" onclick="selectCourse()">CSE 102</a></li>
                     <li><a href="#">CSE 110</a></li>
-                    <li><a href="#">CSE 114</a></li>
-                    <li><a href="#">CSE 130</a></li>
-                    <li><a href="#">CSE 150</a></li>
-                    <li><a href="#">CSE 160</a></li>
-                    <li><a href="#">CSE 214</a></li>
-                    <li><a href="#">CSE 215</a></li>
-                    <li><a href="#">CSE 219</a></li>
-                    <li><a href="#">CSE 220</a></li>
-                    <li><a href="#">CSE 230</a></li>
-                    <li><a href="#">CSE 260</a></li>
-                    <li><a href="#">CSE 300</a></li>
-                    <li><a href="#">CSE 301</a></li>
-                    <li><a href="#">CSE 303</a></li>
-                    <li><a href="#">CSE 304</a></li>
-                    <li><a href="#">CSE 305</a></li>
-                    <li><a href="#">CSE 306</a></li>
-                    <li><a href="#">CSE 307</a></li>
-                    <li><a href="#">CSE 308</a></li>
-                    <li><a href="#">CSE 310</a></li>
-                    <li><a href="#">CSE 311</a></li>
-                    <li><a href="#">CSE 312</a></li>
-                    <li><a href="#">CSE 320</a></li>
-                    <li><a href="#">CSE 323</a></li>
-                    <li><a href="#">CSE 325</a></li>
-                    <li><a href="#">CSE 328</a></li>
-                    <li><a href="#">CSE 332</a></li>
-                    <li><a href="#">CSE 334</a></li>
-                    <li><a href="#">CSE 336</a></li>
-                    <li><a href="#">CSE 355</a></li>
-                    <li><a href="#">CSE 364</a></li>
-                    <li><a href="#">CSE 366</a></li>
-                    <li><a href="#">CSE 373</a></li>
-                    <li><a href="#">CSE 380</a></li>
-                    <li><a href="#">CSE 408</a></li>
-
 
                 </ul>
             </div>

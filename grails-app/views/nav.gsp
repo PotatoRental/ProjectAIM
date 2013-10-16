@@ -26,7 +26,7 @@
         </ul>
     </li>
     <li>
-        <a href="#">Misc</a>
+        <a href="#">More...</a>
         <ul class="cbp-tm-submenu">
             <li><a href="#" class="cbp-tm-icon-screen">Manage User Accounts</a></li>
             <li><a href="#" class="cbp-tm-icon-mail">Manage Minutes</a></li>
