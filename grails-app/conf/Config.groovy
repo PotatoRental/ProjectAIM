@@ -122,6 +122,8 @@ grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'projectaim.sec
 grails.plugin.springsecurity.authority.className = 'projectaim.security.SecRole'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
+    '/courses/**':                    ['permitAll'],
+    '/dbconsole/**':                  ['permitAll'],
 	'/index':                         ['permitAll'],
 	'/index.gsp':                     ['permitAll'],
 	'/**/js/**':                      ['permitAll'],
