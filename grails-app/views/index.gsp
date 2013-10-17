@@ -33,27 +33,47 @@
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
-                <li><a href="#">Programs & Courses</a></li>
-                <li class="active">Courses</li>
                 <span id="topnav"><a href="#">Username</a> | <a href="#">Log Out</a></span>
             </ol>
 
-            <div class="row">
-                <div class="homenav">
-                    <div class="col-md-4">Programs & Courses</div>
-
-                    <div class="col-md-4">Student Outcomes</div>
-
-                    <div class="col-md-4">PEOs</div>
-
-                    <div class="col-md-4">Minutes</div>
-
-                    <div class="col-md-4">Surveys</div>
-
-                    <div class="col-md-4">Users</div>
-
-                </div>
+            <div class="alert alert-dismissable alert-warning">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>4 courses are missing information.</strong> <a href="#">View</a>.
             </div>
+
+            <div class="alert alert-dismissable alert-info">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                2 courses have been added to the system. <a href="#">View</a>.
+            </div>
+
+                <div class="homenav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">All Course Listings</a></li>
+                        <li><a href="#">Degree Programs</a></li>
+                        <li><a href="#">View Instructors</a></li>
+                        <li><a href="#">View Course Coordinators</a></li>
+                        <li><a href="#">View Evaluators</a></li>
+
+                    </ul>
+
+                    <h4>
+                        Courses You Are Teaching
+                    </h4>
+                    <ul>
+                        <li><a href="#">CSE 102</a></li>
+                        <li><a href="#">CSE 320</a></li>
+                    </ul>
+
+                    <h4>Courses You Are Coordinating</h4>
+                    <ul>
+                        <li><a href="#">CSE 336</a></li>
+                        <li><a href="#">CSE 373</a></li>
+                    </ul>
+                </div>
+
+
+
         </div>
     </div>
 </div>
@@ -82,6 +102,10 @@
             });
         });
     })(jQuery);
+
+    var toggletext = function (){
+        alert($(this).attr('id'));
+    };
 </script>
 
 </body>
