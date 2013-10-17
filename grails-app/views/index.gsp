@@ -34,11 +34,7 @@
                 <ol class="breadcrumb">
                     <li class="active"><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
                     <span id="topnav">
-                        <sec:ifLoggedIn>
-                            <a href="#"><sec:username /></a>
-                            ${sec.loggedInUserInfo(field: 'authorities')}
-                            <g:if test="${sec.loggedInUserInfo(field: 'authorities')[0] == 'ROLE_ADMIN'}"> Administrator</g:if>
-                        </sec:ifLoggedIn>
+                        <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
                         <sec:ifNotLoggedIn><g:link controller="login" action="auth" >Login</g:link></sec:ifNotLoggedIn>
                         <sec:ifLoggedIn><g:link controller="logout">| Log Out</g:link></sec:ifLoggedIn>
                     </span>

@@ -68,7 +68,7 @@ h1, .importpage h1 {
     border-bottom:1px solid #dcdcec;
 }
 
-#searchbar .row:hover {
+#searchbar .row:hover, .homenav div:hover{
     color:#fff;
     background-color: #428bca;
     -o-transition:.5s;
@@ -162,4 +162,13 @@ h1, .importpage h1 {
     height: 45px;
     font-size: 14px ;
     background-color: #dcdcec;
+}
+
+.homenav div {
+    border: 1px solid #dcdcec;
+    padding: 60px 40px;
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 300;
+    text-align: center;
 }
