@@ -34,12 +34,11 @@ class SecUserController {
         }
 
         secUserInstance.save flush: true
-        SecUserSecRole.create secUserInstance, new SecRole(authority: 'ROLE_ADMIN').save()
+        SecUserSecRole.create secUserInstance, SecRole.findByAuthority("ROLE_ADMIN")
 
         request.withFormat {
             form {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'secUserInstance.label', default: 'SecUser'), secUserInstance.id])
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'SecUserInstance.label', default: 'SecSec'), SecRole.findByAuthority("ROLE_ADMIN")])
                 redirect secUserInstance
             }
             '*' { respond secUserInstance, [status: CREATED] }
