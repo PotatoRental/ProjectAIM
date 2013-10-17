@@ -2,13 +2,13 @@
 <html lang="en" class="no-js">
 <head>
     <meta name="layout" content="main">
-    <r:require modules="application, home" />
+    <r:require modules="application, home"/>
 
     %{--<meta name="author" content="Monika Tuchowska"/>--}%
     %{--<link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'default.css')}"/>--}%
     %{--<link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'component.css')}"/>--}%
     %{--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,900italic,900,500'--}%
-          %{--type='text/css'>--}%
+    %{--type='text/css'>--}%
 
     %{--<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" media="screen">--}%
     %{--<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css"/>--}%
@@ -33,19 +33,14 @@
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li><a href="/ProjectAIM/"><span class="glyphicon glyphicon-home"/></a></li>
-                <span id="topnav">
-                    <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
-                    <sec:ifNotLoggedIn><g:link controller="login" action="auth" >Login</g:link></sec:ifNotLoggedIn>
-                    <sec:ifLoggedIn><g:link controller="logout">| Log Out</g:link></sec:ifLoggedIn>
-                </span>
+                <span id="topnav"><a href="#">Username</a> | <a href="#">Log Out</a></span>
             </ol>
 
 
             <div class="row">
 
-            <div class="col-md-3 col-sm-3">
-                <h4>Quick Links</h4>
-                <div class="quicklinks">
+                <div class="col-md-8">
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#">All Course Listings</a></li>
                         <li><a href="#">Degree Programs</a></li>
@@ -54,30 +49,23 @@
                         <li><a href="#">View Evaluators</a></li>
 
                     </ul>
-                </div>
 
-                <br>
-
-                <h4>
-                    Courses You Are Teaching
-                </h4>
-                <div class="quicklinks">
+                    <h4>
+                        Courses You Are Teaching
+                    </h4>
                     <ul>
                         <li><a href="#">CSE 102</a></li>
                         <li><a href="#">CSE 320</a></li>
                     </ul>
-                </div>
-                <br>
-                <h4>Courses You Are Coordinating</h4>
-                <div class="quicklinks">
+
+                    <h4>Courses You Are Coordinating</h4>
                     <ul>
                         <li><a href="#">CSE 336</a></li>
                         <li><a href="#">CSE 373</a></li>
                     </ul>
                 </div>
-            </div>
 
-                <div class="col-md-7 col-sm-7 col-md-offset-1 col-sm-offset-1">
+                <div class="col-md-4">
                     <h4>Updates</h4>
 
                     <div class="alert alert-dismissable alert-warning">
@@ -91,8 +79,7 @@
                     </div>
                 </div>
 
-
-             </div>
+            </div>
         </div>
     </div>
 </div>
