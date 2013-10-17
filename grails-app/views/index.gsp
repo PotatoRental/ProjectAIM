@@ -2,13 +2,13 @@
 <html lang="en" class="no-js">
 <head>
     <meta name="layout" content="main">
-    <r:require modules="application, home" />
+    <r:require modules="application, home"/>
 
     %{--<meta name="author" content="Monika Tuchowska"/>--}%
     %{--<link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'default.css')}"/>--}%
     %{--<link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'component.css')}"/>--}%
     %{--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,900italic,900,500'--}%
-          %{--type='text/css'>--}%
+    %{--type='text/css'>--}%
 
     %{--<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" media="screen">--}%
     %{--<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css"/>--}%
@@ -29,18 +29,30 @@
     <g:include view="nav.gsp"/>
 
     <div class="row maincontent">
+
         <div class="col-md-12">
-            <div class="row">
-                <ol class="breadcrumb">
-                    <li class="active"><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
-                </ol>
-            </div>
+            <ol class="breadcrumb">
+                <li><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
+                <li><a href="#">Programs & Courses</a></li>
+                <li class="active">Courses</li>
+                <span id="topnav"><a href="#">Username</a> | <a href="#">Log Out</a></span>
+            </ol>
 
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h1>AIM Home</h1>
+                <div class="homenav">
+                    <div class="col-md-4">Programs & Courses</div>
+
+                    <div class="col-md-4">Student Outcomes</div>
+
+                    <div class="col-md-4">PEOs</div>
+
+                    <div class="col-md-4">Minutes</div>
+
+                    <div class="col-md-4">Surveys</div>
+
+                    <div class="col-md-4">Users</div>
+
                 </div>
-
             </div>
         </div>
     </div>
