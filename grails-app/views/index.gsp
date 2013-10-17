@@ -83,8 +83,23 @@
                 </div>
 
                 <div class="col-md-7 col-sm-7 col-sm-offset-1 col-md-offset-1">
+                    <sec:ifNotLoggedIn>
+                        %{--CSE 308 final project. The purpose of project is to recreate the computer science department's ABET Information Manager.
+
+The system's main functions are to:
+
+(1) Provide a repository for all accreditation-related material. This consists primarily of information used to assess achievement of PEOs and student outcomes. It also includes some miscellaneous material, such as minutes of CIC meetings.
+
+(2) Provide a convenient way for instructors and CIC members to add information to the repository.
+
+(3) Provide CIC members and evaluators (outside experts appointed by ABET to evaluate a degree program) with convenient access to this material
+
+(4) Generate various tables from the data in the repository, to be included in the department's report to ABET.
+
+The rest of this overview provides some background on how achievement of PEOs and student outcomes are measured...--}%
+                    </sec:ifNotLoggedIn>
                     <sec:ifLoggedIn>
-                    
+                        <h1>Hello, welcome <sec:loggedInUserInfo field="username"/></h1>
                     </sec:ifLoggedIn>
                     <sec:ifAnyGranted roles="ROLE_CIC">
                         <h4>Updates</h4>
