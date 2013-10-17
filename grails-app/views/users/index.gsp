@@ -33,8 +33,7 @@
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
-                <li><a href="#">Programs & Courses</a></li>
-                <li class="active">Courses</li>
+                <li class ="active"><a href="#">Users</a></li>
                 <span id="topnav"><a href="#">Username</a> | <a href="#">Log Out</a></span>
             </ol>
 
