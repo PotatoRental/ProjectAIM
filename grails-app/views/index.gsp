@@ -33,9 +33,13 @@
         <div class="col-md-12">
             <ol class="breadcrumb">
                 <li><a href="/ProjectAIM/"><span class="glyphicon glyphicon-home"/></a></li>
-                <span id="topnav"><a href="#">Username</a> | <a href="#">Log Out</a></span>
+                <span id="topnav">
+                    <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
+                    <sec:ifNotLoggedIn><g:link controller="login" action="auth" >Login</g:link></sec:ifNotLoggedIn>
+                    <sec:ifLoggedIn><g:link controller="logout">| Log Out</g:link></sec:ifLoggedIn>
+                </span>
             </ol>
-
+            <p style="font-size: 50pt">${flash.message}</p>
 
             <div class="row">
 
@@ -47,7 +51,6 @@
                         <li><a href="#">View Instructors</a></li>
                         <li><a href="#">View Course Coordinators</a></li>
                         <li><a href="#">View Evaluators</a></li>
-
                     </ul>
 
                     <h4>
