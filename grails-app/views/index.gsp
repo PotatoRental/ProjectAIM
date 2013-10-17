@@ -34,11 +34,12 @@
             <ol class="breadcrumb">
                 <li><a href="/ProjectAIM/"><span class="glyphicon glyphicon-home"/></a></li>
                 <span id="topnav">
-                    <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
-                    <sec:ifNotLoggedIn><g:link controller="login" action="auth" >Login</g:link></sec:ifNotLoggedIn>
+                    <sec:ifLoggedIn><a href="#"><sec:username/></a></sec:ifLoggedIn>
+                    <sec:ifNotLoggedIn><g:link controller="login" action="auth">Login</g:link></sec:ifNotLoggedIn>
                     <sec:ifLoggedIn><g:link controller="logout">| Log Out</g:link></sec:ifLoggedIn>
                 </span>
             </ol>
+
             <p style="font-size: 50pt">${flash.message}</p>
 
             <div class="row">
@@ -72,17 +73,19 @@
                 </div>
 
                 <div class="col-md-4">
-                    <h4>Updates</h4>
+                    <sec:ifAnyGranted roles="ROLE_CIC">
+                        <h4>Updates</h4>
 
-                    <div class="alert alert-dismissable alert-warning">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <strong>4 courses are missing information.</strong> <a href="#">View</a>.
-                    </div>
+                        <div class="alert alert-dismissable alert-warning">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <strong>4 courses are missing information.</strong> <a href="#">View</a>.
+                        </div>
 
-                    <div class="alert alert-dismissable alert-info">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        2 courses have been added to the system. <a href="#">View</a>.
-                    </div>
+                        <div class="alert alert-dismissable alert-info">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            2 courses have been added to the system. <a href="#">View</a>.
+                        </div>
+                    </sec:ifAnyGranted>
                 </div>
 
             </div>

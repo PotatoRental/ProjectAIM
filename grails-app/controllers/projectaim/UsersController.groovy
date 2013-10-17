@@ -17,7 +17,7 @@ class UsersController {
         }
 
         if (secUserInstant.hasErrors()) {
-            respond secUserInstant.errors, view: 'adduser'
+            respond secUserInstant.errors, view: 'users'
             return
         }
 
