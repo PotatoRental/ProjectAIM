@@ -29,24 +29,59 @@
     <g:include view="nav.gsp"/>
 
     <div class="row maincontent">
+
         <div class="col-md-12">
-            <div class="row">
-                <ol class="breadcrumb">
-                    <li class="active"><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
-                    <li><a href="#">Programs & Courses</a></li>
-                    <li>Courses</li>
-                    <span id="topnav">
-                        <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
-                        <sec:ifNotLoggedIn><g:link uri="/login">Login</g:link></sec:ifNotLoggedIn> | <a href="#">Log Out</a></span>
-                </ol>
-            </div>
+            <ol class="breadcrumb">
+                <li><a href="/ProjectAIM/"><span class="glyphicon glyphicon-home"/></a></li>
+                <span id="topnav"><a href="#">Username</a> | <a href="#">Log Out</a></span>
+            </ol>
+
+
 
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h1>AIM Home</h1>
+
+            <div class="col-md-8">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">All Course Listings</a></li>
+                    <li><a href="#">Degree Programs</a></li>
+                    <li><a href="#">View Instructors</a></li>
+                    <li><a href="#">View Course Coordinators</a></li>
+                    <li><a href="#">View Evaluators</a></li>
+
+                </ul>
+
+                <h4>
+                    Courses You Are Teaching
+                </h4>
+                <ul>
+                    <li><a href="#">CSE 102</a></li>
+                    <li><a href="#">CSE 320</a></li>
+                </ul>
+
+                <h4>Courses You Are Coordinating</h4>
+                <ul>
+                    <li><a href="#">CSE 336</a></li>
+                    <li><a href="#">CSE 373</a></li>
+                </ul>
+            </div>
+
+                <div class="col-md-4">
+                    <h4>Updates</h4>
+
+                    <div class="alert alert-dismissable alert-warning">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>4 courses are missing information.</strong> <a href="#">View</a>.
+                    </div>
+
+                    <div class="alert alert-dismissable alert-info">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        2 courses have been added to the system. <a href="#">View</a>.
+                    </div>
                 </div>
 
-            </div>
+
+             </div>
         </div>
     </div>
 </div>

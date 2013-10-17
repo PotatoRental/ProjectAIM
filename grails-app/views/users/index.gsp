@@ -44,12 +44,7 @@
 
         <div class="col-md-4 col-sm-4 searchbar" id="searchbar">
             <div class="row">
-                <div class="input-group">
-                    <div class="input-group-btn">
-                        <!-- Button and dropdown menu -->
-                    </div>
-                    <input type="text" class="form-control">
-                </div>
+
                 <span id="search-ico" class="glyphicon glyphicon-search"></span>
 
                 <input type="text" id="searchfield" value="Search Courses" onclick="this.value=''">
@@ -74,10 +69,10 @@
 
         <div class="col-md-8 col-sm-8">
             <div id="course-home">
-                <g:include view="courses.gsp"/>
+                <g:include view="users/useraccounts.gsp"/>
             </div>
             <div class="importpage" id="cse102">
-                <g:include view="course.gsp"/>
+                <g:include view="users/walterwhite.gsp"/>
             </div>
 
             <div class="importpage" id="edit-form">

@@ -12,7 +12,7 @@
 <div class="container">
     <ul id="cbp-tm-menu" class="cbp-tm-menu">
         <g:link style="float:left" uri="/"><img id="aimlogo" src="${resource(dir: "images", file: "logo.png")} "/></g:link>
-    </ul>
+    </ul>   </div>
     <div id='login-wrap'>
 
         <div id='login'>
@@ -43,7 +43,7 @@
 
         </div>
     </div>
-</div>
+
 <script type='text/javascript'>
     <!--
     (function () {
