@@ -84,7 +84,7 @@
 
                 <div class="col-md-7 col-sm-7 col-sm-offset-1 col-md-offset-1">
                     <sec:ifLoggedIn>
-                    %{--<h1> hello world</h1>--}%
+                    %{-- TODO <h1>Hello, welcome back <sec:loginUserInfo field: username /></h1>--}%
                     </sec:ifLoggedIn>
                     <sec:ifAnyGranted roles="ROLE_CIC">
                         <h4>Updates</h4>
