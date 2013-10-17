@@ -80,6 +80,10 @@
                         </sec:ifAnyGranted>
                 </div>
 
+                <div class="col-md-4">
+                    <sec:ifAnyGranted roles="ROLE_CIC">
+                        <h4>Updates</h4>
+
                 <div class="col-md-7 col-md-offset-1">
                     <h4>Updates</h4>
 

@@ -122,9 +122,9 @@ grails.plugin.springsecurity.authority.className = 'projectaim.security.SecRole'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/': ['permitAll'],
         '/courses/**': ['permitAll'],
-        '/secUser/**': ['permitAll'],
-        '/secRole/**': ['permitAll'],
-        '/users/**': ['ROLE_ADMIN'],
+        '/secUser/**': ['ROLE_ADMIN'],
+        '/secRole/**': ['ROLE_ADMIN'],
+        '/users/**': ['ROLE_ADMIN', 'ROLE_CIC'],
         '/dbconsole/**': ['permitAll'],
         '/index': ['permitAll'],
         '/index.gsp': ['permitAll'],
