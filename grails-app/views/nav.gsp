@@ -1,5 +1,7 @@
 <ul id="cbp-tm-menu" class="cbp-tm-menu">
     <g:link style="float:left" uri="/"><img id="aimlogo" src="${resource(dir: "images", file: "logo_b.png")} "/></g:link>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500' rel='stylesheet' type='text/css'>
+
     <li>
 
         <a href="#">Programs & Courses</a>
