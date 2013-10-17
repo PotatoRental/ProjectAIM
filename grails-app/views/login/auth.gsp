@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
 <head>
     <meta name='layout' content='main'/>
     <title><g:message code="springSecurity.login.title"/></title>
 
     <r:require modules="application, home"/>
-
 </head>
 
 <body>
@@ -52,4 +49,3 @@
     // -->
 </script>
 </body>
-</html>
