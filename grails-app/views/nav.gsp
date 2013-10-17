@@ -1,5 +1,5 @@
 <ul id="cbp-tm-menu" class="cbp-tm-menu">
-    <g:link style="float:left" uri="/"><img id="aimlogo" src="${resource(dir: "images", file: "logo.png")} "/></g:link>
+    <g:link style="float:left" uri="/"><img id="aimlogo" src="${resource(dir: "images", file: "logo_b.png")} "/></g:link>
     <li>
 
         <a href="#">Programs & Courses</a>
