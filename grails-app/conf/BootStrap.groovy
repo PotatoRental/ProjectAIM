@@ -18,7 +18,7 @@ class BootStrap {
             SecUserSecRole.create user1, adminRole, true
         }
 
-        def user2 = SecUser.findByUsername('monika') ?: new SecUser(username: 'monika', enabled: true, password: 'test', accountExpired: false, accountLocked: false, passwordExpired: false).save(flush: true)
+        def user2 = SecUser.findByUsername('mons') ?: new SecUser(username: 'mons', enabled: true, password: 'test', accountExpired: false, accountLocked: false, passwordExpired: false).save(flush: true)
         if (!user2.authorities.contains(cicRole)) {
             SecUserSecRole.create user2, cicRole, true
         }
