@@ -18,4 +18,8 @@ modules = {
         resource url: 'css/main.css'
     }
 
+    search {
+        dependsOn 'angular'
+        resource url: 'js/angular.min.js'
+    }
 }

@@ -1,10 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html xmlns:ng="http://angularjs.org" ng-app class="no-js" lang="en">
 <head>
-    <meta name="layout" content="main">
-    <r:require modules="application, home" />
 
+    <meta name="layout" content="main">
+    <r:require modules="application, home, search" />
     <meta name="author" content="Monika Tuchowska"/>
 %{--
 
@@ -45,10 +45,10 @@
 
         </div>
 
-        <div class="col-md-4 col-sm-4 searchbar" id="searchbar">
+        <div class="col-md-4 col-sm-4 searchbar" id="searchbar" ng-controller="searchCtrl">
             <div class="row">
                 <span id="search-ico" class="glyphicon glyphicon-search"></span>
-                <input type="text" id="searchfield" value="Search Courses" onclick="this.value=''">
+                <input type="text" ng-model="search" id="searchfield" value="Search Courses" onclick="this.value=''">
             </div>
             <!-- /input-group -->
 
@@ -56,26 +56,21 @@
             <div class="search-results">
                 <ul>
                     <li><a href="#" onclick="selectCourse()">CSE 102</a></li>
-                    <li><a href="#">CSE 110</a></li>
-                    <li><a href="#">CSE 114</a></li>
-                    <li><a href="#">CSE 110</a></li>
-                    <li><a href="#">CSE 114</a></li>
-                    <li><a href="#">CSE 110</a></li>
-                    <li><a href="#">CSE 114</a></li>
-                    <li><a href="#">CSE 110</a></li>
-                    <li><a href="#">CSE 114</a></li>
-                    <li><a href="#">CSE 110</a></li>
-                    <li><a href="#">CSE 114</a></li>
-                    <li><a href="#">CSE 110</a></li>
-                    <li><a href="#">CSE 114</a></li>
-                    <li><a href="#">CSE 110</a></li>
-                    <li><a href="#">CSE 114</a></li>
+                    <li ng-repeat="course in courses | filter:search">
+                        <a href="#" id={{course.id}}>{{course.name}}</a>
+                    </li>
+
+
 
                 </ul>
             </div>
         </div>
 
         <div class="col-md-8 col-sm-8">
+            <input type="text" ng-model="yourName" placeholder="Enter a name here">
+            <hr>
+            <h1>Hello, meow, {{yourName}}!</h1>
+
             <div id="course-home">
                 <g:include view="courses.gsp"/>
             </div>
@@ -126,8 +121,24 @@
                     scrollInertia: 0
                 }
             });
+
+
         });
     })(jQuery);
+
+    function searchCtrl($scope) {
+        $scope.courses = [
+
+            {name:'CSE 110', click:"", id:"CSE110"},
+            {name:'CSE 114', click:"", id:"CSE114"},
+            {name:'CSE 214', click:"", id:"CSE214"}
+
+        ];
+
+
+
+    }
+
 </script>
 
 </body>
