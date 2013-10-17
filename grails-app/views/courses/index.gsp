@@ -35,7 +35,9 @@
                 <li><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
                 <li><a href="#">Programs & Courses</a></li>
                 <li class="active">Courses</li>
-                <span id="topnav"><a href="#">Username</a> | <a href="#">Log Out</a></span>
+                <span id="topnav">
+                    <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
+                    <sec:ifNotLoggedIn><g:link uri="/login">Login</g:link></sec:ifNotLoggedIn> | <a href="#">Log Out</a></span>
             </ol>
 
         </div>

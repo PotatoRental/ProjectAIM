@@ -32,10 +32,12 @@
     <div class="row maincontent">
         <div class="col-md-12">
             <ol class="breadcrumb">
-                <li><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
-                <li><a href="#">Programs & Courses</a></li>
-                <li class="active">Courses</li>
-                <span id="topnav"><a href="#">Username</a> | <a href="#">Log Out</a></span>
+                <li class="active"><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
+                <li><a href="#">Users</a></li>
+                <li class="active">All Users</li>
+                <span id="topnav">
+                    <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
+                    <sec:ifNotLoggedIn><g:link uri="/login/auth">Login</g:link></sec:ifNotLoggedIn> | <a href="#">Log Out</a></span>
             </ol>
 
         </div>
