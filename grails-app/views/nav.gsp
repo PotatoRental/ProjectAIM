@@ -28,7 +28,7 @@
     <li>
         <a href="#">More...</a>
         <ul class="cbp-tm-submenu">
-            <li><g:link uri="/users/index.gsp" class="cbp-tm-icon-users">Manage User Accounts</g:link></li>
+            <li><g:link uri="/users" class="cbp-tm-icon-users">Manage User Accounts</g:link></li>
             <li><a href="#" class="cbp-tm-icon-mail">Manage Minutes</a></li>
             <li><a href="#" class="cbp-tm-icon-mail">Manage Surveys</a></li>
         </ul>
