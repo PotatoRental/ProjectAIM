@@ -67,9 +67,6 @@
         </div>
 
         <div class="col-md-8 col-sm-8">
-            <input type="text" ng-model="yourName" placeholder="Enter a name here">
-            <hr>
-            <h1>Hello, meow, {{yourName}}!</h1>
 
             <div id="course-home">
                 <g:include view="courses.gsp"/>

@@ -39,39 +39,48 @@
                     <sec:ifLoggedIn><g:link controller="logout">| Log Out</g:link></sec:ifLoggedIn>
                 </span>
             </ol>
+
             <p style="font-size: 50pt">${flash.message}</p>
 
             <div class="row">
 
-                <div class="col-md-8">
+                <div class="col-md-3">
                     <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">All Course Listings</a></li>
-                        <li><a href="#">Degree Programs</a></li>
-                        <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_CIC">
+                    <div class="quicklinks">
+                        <ul>
+                            <li><a href="#">All Course Listings</a></li>
+                            <li><a href="#">Degree Programs</a></li>
+                            <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_CIC">
                             <li><a href="#">View Instructors</a></li>
                             <li><a href="#">View Course Coordinators</a></li>
                             <li><a href="#">View Evaluators</a></li>
-                        </sec:ifAnyGranted>
-                    </ul>
+                            </sec:ifAnyGranted>
+                        </ul>
+                    </div>
+
+                    <br>
                     <sec:ifAnyGranted roles="ROLE_CC">
-                        <h4>
-                            Courses You Are Teaching
-                        </h4>
+                    <h4>
+                        Courses You Are Teaching
+                    </h4>
+                    <div class="quicklinks">
                         <ul>
                             <li><a href="#">CSE 102</a></li>
                             <li><a href="#">CSE 320</a></li>
                         </ul>
-
-                        <h4>Courses You Are Coordinating</h4>
+                    </div>
+                    <br>
+                    <h4>Courses You Are Coordinating</h4>
+                    <div class="quicklinks">
                         <ul>
                             <li><a href="#">CSE 336</a></li>
                             <li><a href="#">CSE 373</a></li>
                         </ul>
-                    </sec:ifAnyGranted>
+                    </div>
+                        </sec:ifAnyGranted>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-7 col-md-offset-1">
                     <h4>Updates</h4>
 
                     <div class="alert alert-dismissable alert-warning">
@@ -85,9 +94,11 @@
                     </div>
                 </div>
 
+
             </div>
         </div>
     </div>
+
 </div>
 
 <div class="col-md-12 content">
