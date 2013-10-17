@@ -2,25 +2,26 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Project AIM</title>
+    <meta name="layout" content="main">
+    <r:require modules="application, home" />
 
     <meta name="author" content="Monika Tuchowska"/>
+    %{--
 
-    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'default.css')}" />
-    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'component.css')}" />
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,900italic,900,500'  type='text/css'>
+        <link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'default.css')}" />
+        <link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'component.css')}" />
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,900italic,900,500'  type='text/css'>
 
-    <link rel="stylesheet" href="${resource(dir: 'css', file:'bootstrap.css')}" media="screen">
-    <link rel="stylesheet" href="${resource(dir: 'css', file:'main.css')}" type="text/css"/>
-    <link rel="stylesheet" href="${resource(dir: 'css', file: 'jquery.mCustomScrollbar.css')}" type="text/css"/>
+        <link rel="stylesheet" href="${resource(dir: 'css', file:'bootstrap.css')}" media="screen">
+        <link rel="stylesheet" href="${resource(dir: 'css', file:'main.css')}" type="text/css"/>
+        <link rel="stylesheet" href="${resource(dir: 'css', file: 'jquery.mCustomScrollbar.css')}" type="text/css"/>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="${resource(dir: 'js', file: 'jquery-ui-1.10.3.custom.min.js')}"></script>
-    <script src="${resource(dir: 'js', file: 'bootstrap.min.js')}"></script>
-    <script src="${resource(dir: 'js', file: 'modernizr.custom.js')}"></script>
-    <script src="${resource(dir: 'js', file: 'jquery.mCustomScrollbar.min.js')}"></script>
-
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="${resource(dir: 'js', file: 'jquery-ui-1.10.3.custom.min.js')}"></script>
+        <script src="${resource(dir: 'js', file: 'bootstrap.min.js')}"></script>
+        <script src="${resource(dir: 'js', file: 'modernizr.custom.js')}"></script>
+        <script src="${resource(dir: 'js', file: 'jquery.mCustomScrollbar.min.js')}"></script>
+    --}%
 
 </head>
 <body>
@@ -37,7 +38,9 @@
                 <li class="active">All Users</li>
                 <span id="topnav">
                     <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
-                    <sec:ifNotLoggedIn><g:link uri="/login/auth">Login</g:link></sec:ifNotLoggedIn> | <a href="#">Log Out</a></span>
+                    <sec:ifNotLoggedIn><g:link controller="login" action="auth" >Login</g:link></sec:ifNotLoggedIn>
+                    <sec:ifLoggedIn><g:link controller="logout">| Log Out</g:link></sec:ifLoggedIn>
+                </span>
             </ol>
 
         </div>

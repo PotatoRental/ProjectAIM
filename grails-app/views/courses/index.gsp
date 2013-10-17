@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Project AIM</title>
+    <meta name="layout" content="main">
+    <r:require modules="application, home" />
 
     <meta name="author" content="Monika Tuchowska"/>
+%{--
 
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'default.css')}" />
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css/nav', file: 'component.css')}" />
@@ -20,7 +21,7 @@
     <script src="${resource(dir: 'js', file: 'bootstrap.min.js')}"></script>
     <script src="${resource(dir: 'js', file: 'modernizr.custom.js')}"></script>
     <script src="${resource(dir: 'js', file: 'jquery.mCustomScrollbar.min.js')}"></script>
-
+--}%
 
 </head>
 <body>
@@ -37,7 +38,9 @@
                 <li class="active">Courses</li>
                 <span id="topnav">
                     <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
-                    <sec:ifNotLoggedIn><g:link uri="/login">Login</g:link></sec:ifNotLoggedIn> | <a href="#">Log Out</a></span>
+                    <sec:ifNotLoggedIn><g:link controller="login" action="auth" >Login</g:link></sec:ifNotLoggedIn>
+                    <sec:ifLoggedIn><g:link controller="logout">| Log Out</g:link></sec:ifLoggedIn>
+                </span>
             </ol>
 
         </div>
