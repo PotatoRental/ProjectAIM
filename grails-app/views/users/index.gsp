@@ -32,18 +32,27 @@
     <div class="row maincontent">
         <div class="col-md-12">
             <ol class="breadcrumb">
-                <li><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
-                <li class ="active"><a href="#">Users</a></li>
-                <span id="topnav"><a href="#">Username</a> | <a href="#">Log Out</a></span>
+                <li class="active"><g:link uri="/"><span class="glyphicon glyphicon-home"/></g:link></li>
+                <li><a href="#">Users</a></li>
+                <li class="active">All Users</li>
+                <span id="topnav">
+                    <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
+                    <sec:ifNotLoggedIn><g:link uri="/login/auth">Login</g:link></sec:ifNotLoggedIn> | <a href="#">Log Out</a></span>
             </ol>
 
         </div>
 
         <div class="col-md-4 col-sm-4 searchbar" id="searchbar">
             <div class="row">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <!-- Button and dropdown menu -->
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
                 <span id="search-ico" class="glyphicon glyphicon-search"></span>
 
-                <input type="text" id="searchfield" value="Search Users" onclick="this.value=''">
+                <input type="text" id="searchfield" value="Search Courses" onclick="this.value=''">
             </div>
             <!-- /input-group -->
 
@@ -55,6 +64,7 @@
                     <li><a href="#">Saul Goodman <span class="label label-default">Evaluator</span></a></li>
                     <li><a href="#">Jesse Pinkman <span class="label label-primary">CIC</span></a></li>
                     <li><a href="#">Hank Schrader <span class="label label-default">Evaluator</span></a></li>
+
                     <li><a href="#">Skyler White <span class="label label-default">Evaluator</span></a></li>
                     <li><a href="#" onclick="selectCourse()">Walter White <span class="label label-primary">CIC</span> <span class="label label-success">Instructor</span></a> </li>
 
@@ -64,10 +74,10 @@
 
         <div class="col-md-8 col-sm-8">
             <div id="course-home">
-                <g:include view="users/useraccounts.gsp"/>
+                <g:include view="courses.gsp"/>
             </div>
             <div class="importpage" id="cse102">
-                <g:include view="users/walterwhite.gsp"/>
+                <g:include view="course.gsp"/>
             </div>
 
             <div class="importpage" id="edit-form">
