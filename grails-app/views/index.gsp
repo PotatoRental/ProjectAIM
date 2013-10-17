@@ -34,50 +34,44 @@
             <ol class="breadcrumb">
                 <li><a href="/ProjectAIM/"><span class="glyphicon glyphicon-home"/></a></li>
                 <span id="topnav">
-                    <a href="#">milky</a>
-
-                    <a href="/ProjectAIM/logout/index">| Log Out</a>
+                    <sec:ifLoggedIn><a href="#"><sec:username /></a></sec:ifLoggedIn>
+                    <sec:ifNotLoggedIn><g:link controller="login" action="auth" >Login</g:link></sec:ifNotLoggedIn>
+                    <sec:ifLoggedIn><g:link controller="logout">| Log Out</g:link></sec:ifLoggedIn>
                 </span>
             </ol>
-
+            <p style="font-size: 50pt">${flash.message}</p>
 
             <div class="row">
 
-                <div class="col-md-3">
+                <div class="col-md-8">
                     <h4>Quick Links</h4>
-                    <div class="quicklinks">
-                        <ul>
-                            <li><a href="#">All Course Listings</a></li>
-                            <li><a href="#">Degree Programs</a></li>
+                    <ul>
+                        <li><a href="#">All Course Listings</a></li>
+                        <li><a href="#">Degree Programs</a></li>
+                        <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_CIC">
                             <li><a href="#">View Instructors</a></li>
                             <li><a href="#">View Course Coordinators</a></li>
                             <li><a href="#">View Evaluators</a></li>
-
-                        </ul>
-                    </div>
-
-                    <br>
-
-                    <h4>
-                        Courses You Are Teaching
-                    </h4>
-                    <div class="quicklinks">
+                        </sec:ifAnyGranted>
+                    </ul>
+                    <sec:ifAnyGranted roles="ROLE_CC">
+                        <h4>
+                            Courses You Are Teaching
+                        </h4>
                         <ul>
                             <li><a href="#">CSE 102</a></li>
                             <li><a href="#">CSE 320</a></li>
                         </ul>
-                    </div>
-                    <br>
-                    <h4>Courses You Are Coordinating</h4>
-                    <div class="quicklinks">
+
+                        <h4>Courses You Are Coordinating</h4>
                         <ul>
                             <li><a href="#">CSE 336</a></li>
                             <li><a href="#">CSE 373</a></li>
                         </ul>
-                    </div>
+                    </sec:ifAnyGranted>
                 </div>
 
-                <div class="col-md-7 col-md-offset-1">
+                <div class="col-md-4">
                     <h4>Updates</h4>
 
                     <div class="alert alert-dismissable alert-warning">
@@ -90,7 +84,6 @@
                         2 courses have been added to the system. <a href="#">View</a>.
                     </div>
                 </div>
-
 
             </div>
         </div>
