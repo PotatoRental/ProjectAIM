@@ -2,14 +2,17 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'secUser.label', default: 'SecUser')}" />
+        <r:require modules="application, home"/>
+        <g:set var="entityName" value="${message(code: 'secUser.label', default: 'SecUser')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
-	</head>
+        <style>.nav ul { list-style: none; padding: 0px } .nav ul li { display: inline }</style>
+    </head>
+
 	<body>
-		<a href="#create-secUser" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+    <div class="container">
+    <g:include view="nav.gsp"/>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
@@ -34,5 +37,6 @@
 				</fieldset>
 			</g:form>
 		</div>
+    </div>
 	</body>
 </html>

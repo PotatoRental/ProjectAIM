@@ -4,14 +4,47 @@
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'secUser.label', default: 'SecUser')}" />
+        <r:require modules="application, home"/>
+        <g:set var="entityName" value="${message(code: 'secUser.label', default: 'SecUser')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
-	</head>
+        <style>.nav ul { list-style: none; padding: 0px } .nav ul li { display: inline }</style>
+        <style>
+        table {
+            color: #666666;
+            font-size: 14px;
+            text-shadow: 1px 1px 0px #FFFFFF;
+            border: #3A767B 1px solid;
+            width: 95%;
+            margin: 0px auto;
+
+            -moz-box-shadow: 0 1px 2px #D1D1D1;
+            -webkit-box-shadow: 0 1px 2px #D1D1D1;
+            box-shadow: 0 1px 2px #D1D1D1;
+        }
+        table th {
+            padding:21px 25px 22px 25px;
+            border-top:1px solid #000000;
+            border-bottom:1px solid #FF8989;
+
+            background: #FFFFFF;
+            background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#FAFAFA));
+            background: -moz-linear-gradient(top,  #FFFFFF,  #FAFAFA);
+        }table td {
+             padding:10px;
+             border-top: 1px solid #000000;
+             border-bottom:1px solid #e0e0e0;
+             border-left: 1px solid #e0e0e0;
+
+             background: #F9F9F9;
+             background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#fAfAfA));
+             background: -moz-linear-gradient(top,  #FFFFFF,  #FAFAFA);
+        </style>
+    </head>
 	<body>
-		<a href="#list-secUser" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+    <div class="container">
+    <g:include view="nav.gsp"/>
 		<div class="nav" role="navigation">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>
@@ -20,7 +53,7 @@
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<table>
+			<table class="classic-mons">
 			<thead>
 					<tr>
 					
