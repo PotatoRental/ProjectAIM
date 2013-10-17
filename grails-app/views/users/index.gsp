@@ -77,7 +77,9 @@
             <div class="importpage" id="cse102">
                 <g:include view="users/walterwhite.gsp"/>
             </div>
-
+            <div class="importpage" id="add-user">
+                <g:include view="users/adduser.gsp"/>
+            </div>
             <div class="importpage" id="edit-form">
                 <g:include view="course2.gsp"/>
             </div>
@@ -109,6 +111,10 @@
         $("#course-home").slideToggle("fast");
         $("#cse102").slideToggle("fast");
         courseSelected = true;
+    }
+    var addUser = function () {
+        $("#course-home").slideToggle("fast");
+        $("#add-user").slideToggle("fast");
     }
 </script>
 

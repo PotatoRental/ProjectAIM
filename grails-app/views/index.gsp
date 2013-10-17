@@ -48,24 +48,27 @@
                     <ul>
                         <li><a href="#">All Course Listings</a></li>
                         <li><a href="#">Degree Programs</a></li>
-                        <li><a href="#">View Instructors</a></li>
-                        <li><a href="#">View Course Coordinators</a></li>
-                        <li><a href="#">View Evaluators</a></li>
+                        <sec:ifAnyGranted roles="ROLE_ADMIN, ROLE_CIC">
+                            <li><a href="#">View Instructors</a></li>
+                            <li><a href="#">View Course Coordinators</a></li>
+                            <li><a href="#">View Evaluators</a></li>
+                        </sec:ifAnyGranted>
                     </ul>
+                    <sec:ifAnyGranted roles="ROLE_CC">
+                        <h4>
+                            Courses You Are Teaching
+                        </h4>
+                        <ul>
+                            <li><a href="#">CSE 102</a></li>
+                            <li><a href="#">CSE 320</a></li>
+                        </ul>
 
-                    <h4>
-                        Courses You Are Teaching
-                    </h4>
-                    <ul>
-                        <li><a href="#">CSE 102</a></li>
-                        <li><a href="#">CSE 320</a></li>
-                    </ul>
-
-                    <h4>Courses You Are Coordinating</h4>
-                    <ul>
-                        <li><a href="#">CSE 336</a></li>
-                        <li><a href="#">CSE 373</a></li>
-                    </ul>
+                        <h4>Courses You Are Coordinating</h4>
+                        <ul>
+                            <li><a href="#">CSE 336</a></li>
+                            <li><a href="#">CSE 373</a></li>
+                        </ul>
+                    </sec:ifAnyGranted>
                 </div>
 
                 <div class="col-md-4">

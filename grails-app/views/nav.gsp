@@ -40,7 +40,7 @@
         </li>
         <li><a href="#">Minutes</a></li>
         <li><a href="#">Surveys</a></li>
-        <li><g:link uri="/users/index.gsp">Users</g:link></li>
+        <li><g:link uri="/users/">Users</g:link></li>
     </sec:ifAnyGranted>
 </ul>
 
