@@ -51,7 +51,6 @@ h1, .importpage h1 {
 }
 
 .search-results {
-    min-height: 550px;
     max-height: 550px;
     overflow: auto;
 }

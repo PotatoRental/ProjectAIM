@@ -42,7 +42,14 @@
 
         <div class="col-md-4 col-sm-4 searchbar" id="searchbar">
             <div class="row">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <!-- Button and dropdown menu -->
+                    </div>
+                    <input type="text" class="form-control">
+                </div>
                 <span id="search-ico" class="glyphicon glyphicon-search"></span>
+
                 <input type="text" id="searchfield" value="Search Courses" onclick="this.value=''">
             </div>
             <!-- /input-group -->
@@ -50,8 +57,14 @@
 
             <div class="search-results">
                 <ul>
-                    <li><a href="#" onclick="selectCourse()">CSE 102</a></li>
-                    <li><a href="#">CSE 110</a></li>
+                    <li><a href="#">Gale Boetticher <span class="label label-info">Course Coord.</span></a></li>
+                    <li><a href="#">Gustavo Fring <span class="label label-primary">CIC</span></a> </li>
+                    <li><a href="#">Saul Goodman <span class="label label-default">Evaluator</span></a></li>
+                    <li><a href="#">Jesse Pinkman <span class="label label-primary">CIC</span></a></li>
+                    <li><a href="#">Hank Schrader <span class="label label-default">Evaluator</span></a></li>
+
+                    <li><a href="#">Skyler White <span class="label label-default">Evaluator</span></a></li>
+                    <li><a href="#" onclick="selectCourse()">Walter White <span class="label label-primary">CIC</span> <span class="label label-success">Instructor</span></a> </li>
 
                 </ul>
             </div>
@@ -85,19 +98,7 @@
 <script>
     var enabled = true;
     var courseSelected = false;
-    /*
-     $("#searchbtn").click(
-     function(){
-     //alert("meow");
-     $("#searchbar").switchClass("col-md-6 col-md-offset-3", "col-md-4");
 
-     //$("#searchbar").removeClass("col-md-6 col-md-offset-3");
-     if (enabled)
-     $(".search-results").slideToggle();
-     enabled = false;
-     }
-     );
-     */
 
     var toggleEdit = function () {
         $(".importpage").slideToggle("fast");
